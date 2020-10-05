@@ -2,12 +2,7 @@
   "name": "download embedded video",
   "version": "1.0",
   "description": "download embedded video!",
-  "permissions": ["activeTab", "declarativeContent", "storage"],
-  "options_page": "options.html",
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
+  "permissions": ["activeTab", "storage", "downloads", "<all_urls>"],
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
