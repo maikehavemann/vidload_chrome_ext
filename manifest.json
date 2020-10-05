@@ -2,20 +2,12 @@
   "name": "download embedded video",
   "version": "1.0",
   "description": "download embedded video!",
-  "permissions": ["activeTab", "storage", "downloads", "<all_urls>"],
+  "permissions": ["activeTab", "downloads", "<all_urls>"],
   "browser_action": {
     "default_popup": "popup.html",
-    "default_icon": {
-      "16": "button.png",
-      "32": "button.png",
-      "48": "button.png",
-      "128": "button.png"
-    }
+    "default_icon": "button.png"
   },
-  "icons": {
-    "16": "button.png",
-    "32": "button.png",
-    "48": "button.png",
+  "icons":{
     "128": "button.png"
   },
   "manifest_version": 2
