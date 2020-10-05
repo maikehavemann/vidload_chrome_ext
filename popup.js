@@ -3,11 +3,12 @@ chrome.extension.onRequest.addListener(function(links) {
 
   chrome.downloads.download({url: link["url"], filename: link["filename"]},
     function(id) {
+      window.close()
   });
 })
 
 window.onload = function(){
-  document.getElementById("changeColor").onclick = function(){
+  //document.getElementById("changeColor").onclick = function(){
     chrome.windows.getCurrent(function (currentWindow) {
       chrome.tabs.query({active: true, windowId: currentWindow.id},
                         function(activeTabs) {
@@ -15,5 +16,5 @@ window.onload = function(){
           activeTabs[0].id, {file: 'extract_link.js', allFrames: true});
       });
     });
-  }
+  //}
 }
